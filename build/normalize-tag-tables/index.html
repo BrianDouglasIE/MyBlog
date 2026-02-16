@@ -98,8 +98,8 @@ like <em>video:actor</em> and <em>video:director</em>, so it's perfect for model
 table for each instance of a tag. This was a mistake as I ended up having to create many tables along the lines of
 <code>og_book_tag</code> and <code>og_article_tag</code> for example.</p>
 <p>As always if something feels wrong it usually is. I took a quick look over the schema and realised that the initial
-<em>og</em>object_ (which is the parent entity) is referenced in each of these child tables, 
-and as such I could create an <em>og</em>tags_ table to track all the tags as I have done below.</p>
+<code>og_object</code> (which is the parent entity) is referenced in each of these child tables, 
+and as such I could create an <code>og_tags</code> table to track all the tags as I have done below.</p>
 <pre class="sql language-sql"><code class="hljs sql language-sql"><span class="hljs-keyword">create table</span> og_tags (
     id <span class="hljs-type">bigint</span> generated always <span class="hljs-keyword">as</span> <span class="hljs-keyword">identity</span> <span class="hljs-keyword">primary key</span>,
     og_object_id <span class="hljs-type">bigint</span> <span class="hljs-keyword">not null</span> <span class="hljs-keyword">references</span> og_objects(id) <span class="hljs-keyword">on</span> <span class="hljs-keyword">delete</span> cascade,
@@ -113,7 +113,7 @@ and as such I could create an <em>og</em>tags_ table to track all the tags as I 
 <span class="hljs-keyword">create</span> index idx_og_tags_tag <span class="hljs-keyword">on</span> og_tags(tag);
 </code></pre>
 <p>Now I can select the tags relevant to an entity using joins. </p>
-<p>In the example below I get the tags for the <em>og</em>video<em>movies</em> related to the <em>og</em>object_ 
+<p>In the example below I get the tags for the <code>og_video_movies</code> related to the <code>og_object</code> 
 with an id of <code>123</code>. This means that I can delete all the redundant pivot tables I had initially created.</p>
 <pre class="sql language-sql"><code class="hljs sql language-sql"><span class="hljs-keyword">SELECT</span> t.tag
 <span class="hljs-keyword">FROM</span> og_tags t

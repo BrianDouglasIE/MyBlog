@@ -20,8 +20,8 @@ table for each instance of a tag. This was a mistake as I ended up having to cre
 `og_book_tag` and `og_article_tag` for example.
 
 As always if something feels wrong it usually is. I took a quick look over the schema and realised that the initial
-_og_object_ (which is the parent entity) is referenced in each of these child tables, 
-and as such I could create an _og_tags_ table to track all the tags as I have done below.
+`og_object` (which is the parent entity) is referenced in each of these child tables, 
+and as such I could create an `og_tags` table to track all the tags as I have done below.
 
 ```sql
 create table og_tags (
@@ -39,7 +39,7 @@ create index idx_og_tags_tag on og_tags(tag);
 
 Now I can select the tags relevant to an entity using joins. 
 
-In the example below I get the tags for the _og_video_movies_ related to the _og_object_ 
+In the example below I get the tags for the `og_video_movies` related to the `og_object` 
 with an id of `123`. This means that I can delete all the redundant pivot tables I had initially created.
 
 ```sql
