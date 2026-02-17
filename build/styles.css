@@ -34,7 +34,7 @@ main,
 .site-header,
 .breadcrumbs,
 .about {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
 main,
@@ -62,13 +62,18 @@ main,
         fill: white;
     }
 
-    >a {
+    > a {
         margin: 0;
         line-height: 1;
         color: white;
         font-weight: 700;
         font-size: 1.68rem;
         font-family: var(--font-family-heading), sans-serif;
+    }
+
+    .svg-container {
+        display: flex;
+        gap: 1rem;
     }
 }
 
@@ -89,7 +94,7 @@ main,
 
 .post-title-list {
     li {
-        margin-bottom: .68rem;
+        margin-bottom: 0.68rem;
     }
 }
 
@@ -120,7 +125,8 @@ table {
     font-size: 0.95rem;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ccc;
     padding: 8px 12px;
     text-align: left;
@@ -144,7 +150,7 @@ tr:hover {
     align-items: center;
     gap: 1rem;
     justify-content: space-between;
-    padding: 1rem .25rem 1rem 1rem;
+    padding: 1rem 0.25rem 1rem 1rem;
     background: lavender;
     border-radius: 3px;
     border: 1px solid rebeccapurple;
@@ -210,7 +216,7 @@ tr:hover {
 
 .breadcrumbs {
     background: #efefef;
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
 
 .post-excerpt-list {
@@ -235,7 +241,7 @@ time {
         max-height: fit-content;
     }
 
-    div>p {
+    div > p {
         margin-top: 0;
     }
 }
@@ -244,9 +250,9 @@ time {
     .about {
         flex-wrap: wrap;
 
-		img {
-			max-width: 100%;
-		}
+        img {
+            max-width: 100%;
+        }
     }
 
     .post-title-list {

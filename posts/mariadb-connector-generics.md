@@ -20,7 +20,7 @@ I've added a short video below to demonstrate the advantage of this. You'll noti
 `number`, an error is shown as it does not match the type supplied to the prepared statement.
 
 <video controls width="600" style="max-width: 100%">
-  <source src="https://private-user-images.githubusercontent.com/164613613/501041355-5d9c210c-8eb7-49b5-be9f-43890d2c5aa5.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzEzMjY1OTcsIm5iZiI6MTc3MTMyNjI5NywicGF0aCI6Ii8xNjQ2MTM2MTMvNTAxMDQxMzU1LTVkOWMyMTBjLThlYjctNDliNS1iZTlmLTQzODkwZDJjNWFhNS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjE3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIxN1QxMTA0NTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yZDI0YzM5MzkzNjYwZjRhMTcxNTk0NWE2YmQyOTUxODc4MWYzYWFlZGEwYTIzNjliOWZiZmM1N2UxNzVlNzhjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.TUdHL9g4gK6KeZz8Knzzst5dwJO7_y-x3pRADS1O7oY" type="video/mp4">
+  <source src="/videos/mariadb-generics.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
