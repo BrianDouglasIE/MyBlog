@@ -12,12 +12,9 @@ JS code as a result.
 
 In his ["I Optimised My Game Engine Up To 12000 FPS"](https://youtu.be/40JzyaOYJeY?si=5J97q3bm7MsJ3I6k) video Vercidium
 shows a _bit-shifting_ technique which he has used to store information about his voxel based scene. This got me
-thinking
-_could the same technique be used to save memory in JS code?_.
+thinking _could the same technique be used to save memory in JS code?_.
 
-<magpie-trinket>
-<p><strong>TLDR;</strong> Storing a vector (x, y, z) as a 32-bit number uses a seventh of the memory compared to storing
-it as an object in this example.</p>
+<magpie-trinket>**TLDR;** Storing a vector (x, y, z) as a 32-bit number uses a seventh of the memory compared to storing it as an object in this example.</magpie-trinket>
 
 <table class="pure-table">
     <thead>
