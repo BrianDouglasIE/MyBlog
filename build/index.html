@@ -149,6 +149,31 @@
                     <li>
                         <article>
                             <header>
+                                <a href="http-status-codes-table"
+                                    ><h3>http_status_codes table</h3></a
+                                >
+                                <time datetime="23/02/2026"
+                                    >February 23rd, 2026</time
+                                >
+                            </header>
+
+                            <div><p>I've been doing a lot of web scraping for various AI tools. This includes model training, and
+search functionality. One thing I find myself doing is generating lots of prototypes. Each prototype
+requires me to write a new db schema and one thing they share in common is the need for a 
+http<em>status</em>codes table to record the final status response of a web page. You could store the value
+as an int, or string, or even as json to make it queryable. But I feel taking the time to create and
+populate a table of the code is much more advantageous for queries and for indexing. So to help future
+Brian I have pasted the code used to generate this table below.</p></div>
+
+                            <footer>
+                                <a href="http-status-codes-table">Read more</a>
+                            </footer>
+                        </article>
+                    </li>
+                    
+                    <li>
+                        <article>
+                            <header>
                                 <a href="mariadb-connector-generics"
                                     ><h3>Add generics to MariaDB Node Connector</h3></a
                                 >
@@ -186,37 +211,23 @@ how I modelled tags within the database.</p></div>
                         </article>
                     </li>
                     
-                    <li>
-                        <article>
-                            <header>
-                                <a href="rsync-tips"
-                                    ><h3>Some useful rsync tips</h3></a
-                                >
-                                <time datetime="12/02/2026"
-                                    >February 12th, 2026</time
-                                >
-                            </header>
-
-                            <div><p>I've been using rsync to deploy this blog. Because I live on the edge and don't need any deploy pipeline headaches.
-And tbh, this is blog is not critical software it's a static site hosted by a caddy server on UpCloud.
-Anyway here are some quick tips from my experience deploying on the edge.</p></div>
-
-                            <footer>
-                                <a href="rsync-tips">Read more</a>
-                            </footer>
-                        </article>
-                    </li>
-                    
                 </ul>
 
-                <h2>All Posts <i>(83)</i></h2>
+                <h2>All Posts <i>(84)</i></h2>
                 <ul class="post-title-list">
                     
                     <li>
                         <h3>
                             2026 -
-                            <i><small>6 posts</small></i>
+                            <i><small>7 posts</small></i>
                         </h3>
+                    </li>
+                    
+                    <li>
+                        <time datetime="23/02/2026"
+                            >23/02</time
+                        >
+                        <a href="http-status-codes-table">http_status_codes table</a>
                     </li>
                     
                     <li>
