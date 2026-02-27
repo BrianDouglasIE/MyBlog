@@ -1,63 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-SXTREFVFLB"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-    <!-- Meta Description -->
-    <meta name="description" content="Using astyle to format C code"/>
+            gtag("config", "G-SXTREFVFLB");
+        </script>
 
-    <!-- Keywords -->
-    <meta name="keywords" content="Brian Douglas, blog, c"/>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Author -->
-    <meta name="author" content="Brian Douglas"/>
+        <!-- Meta Description -->
+        <meta name="description" content="Using astyle to format C code" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="BrianDouglas.ie - Using astyle to format C code"/>
-    <meta property="og:description" content="Using astyle to format C code"/>
-    <meta property="og:url" content="https://www.briandouglas.ie"/>
-    <meta property="og:image" content="http://www.briandouglas.ie/images/og-images/astyle.png"/>
-    <meta property="og:image:type" content="image/png"/>
-    <meta property="og:image:width" content="1280"/>
-    <meta property="og:image:height" content="640"/>
-    <meta property="og:site_name" content="BrianDouglas.ie"/>
-    <meta property="og:image:alt" content="A preview image for the post titled 'Using astyle to format C code'"/>
+        <!-- Keywords -->
+        <meta
+            name="keywords"
+            content="Brian Douglas, blog, c"
+        />
 
-    <!-- Twitter Meta -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@BrianDouglasIE"/>
-    <meta name="twitter:title" content="BrianDouglas.ie - Using astyle to format C code"/>
-    <meta name="twitter:description" content="Using astyle to format C code"/>
-    <meta name="twitter:image" content="http://www.briandouglas.ie/images/og-images/astyle.png"/>
+        <!-- Author -->
+        <meta name="author" content="Brian Douglas" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.briandouglas.ie"/>
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="BrianDouglas.ie - Using astyle to format C code"
+        />
+        <meta property="og:description" content="Using astyle to format C code" />
+        <meta property="og:url" content="https://www.briandouglas.ie" />
+        <meta
+            property="og:image"
+            content="http://www.briandouglas.ie/images/og-images/astyle.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta property="og:site_name" content="BrianDouglas.ie" />
+        <meta
+            property="og:image:alt"
+            content="A preview image for the post titled 'Using astyle to format C code'"
+        />
 
-    <!-- Favicon (Optional) -->
-    <link rel="icon" href="https://www.briandouglas.ie/favicon.ico" type="image/x-icon"/>
+        <!-- Twitter Meta -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@BrianDouglasIE" />
+        <meta
+            name="twitter:title"
+            content="BrianDouglas.ie - Using astyle to format C code"
+        />
+        <meta name="twitter:description" content="Using astyle to format C code" />
+        <meta
+            name="twitter:image"
+            content="http://www.briandouglas.ie/images/og-images/astyle.png"
+        />
 
-    <!-- Robots -->
-    <meta name="robots" content="index, follow"/>
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://www.briandouglas.ie" />
 
-    <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-    <link rel="manifest" href="/site.webmanifest"/>
+        <!-- Favicon (Optional) -->
+        <link
+            rel="icon"
+            href="https://www.briandouglas.ie/favicon.ico"
+            type="image/x-icon"
+        />
 
-    <title>Using astyle to format C code</title>
-    <link rel="stylesheet" href="/styles.css">
-    <style>
-pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#24292e;background:#ffffff}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#d73a49}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#6f42c1}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#005cc5}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#032f62}.hljs-built_in,.hljs-symbol{color:#e36209}.hljs-code,.hljs-comment,.hljs-formula{color:#6a737d}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#22863a}.hljs-subst{color:#24292e}.hljs-section{color:#005cc5;font-weight:bold}.hljs-bullet{color:#735c0f}.hljs-emphasis{color:#24292e;font-style:italic}.hljs-strong{color:#24292e;font-weight:bold}.hljs-addition{color:#22863a;background-color:#f0fff4}.hljs-deletion{color:#b31d28;background-color:#ffeef0}.hljs-char.escape_,.hljs-link,.hljs-params,.hljs-property,.hljs-punctuation,.hljs-tag{}
-    </style>
-</head>
-<body>
+        <!-- Robots -->
+        <meta name="robots" content="index, follow" />
 
-<div class="content">
-    <header class="site-header">
+        <!-- Favicon-->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <title>Using astyle to format C code</title>
+        <link rel="stylesheet" href="/styles.css" />
+        <style>
+            pre code.hljs {
+                display: block;
+                overflow-x: auto;
+                padding: 1em;
+            }
+            code.hljs {
+                padding: 3px 5px;
+            }
+            .hljs {
+                color: #24292e;
+                background: #ffffff;
+            }
+            .hljs-doctag,
+            .hljs-keyword,
+            .hljs-meta .hljs-keyword,
+            .hljs-template-tag,
+            .hljs-template-variable,
+            .hljs-type,
+            .hljs-variable.language_ {
+                color: #d73a49;
+            }
+            .hljs-title,
+            .hljs-title.class_,
+            .hljs-title.class_.inherited__,
+            .hljs-title.function_ {
+                color: #6f42c1;
+            }
+            .hljs-attr,
+            .hljs-attribute,
+            .hljs-literal,
+            .hljs-meta,
+            .hljs-number,
+            .hljs-operator,
+            .hljs-selector-attr,
+            .hljs-selector-class,
+            .hljs-selector-id,
+            .hljs-variable {
+                color: #005cc5;
+            }
+            .hljs-meta .hljs-string,
+            .hljs-regexp,
+            .hljs-string {
+                color: #032f62;
+            }
+            .hljs-built_in,
+            .hljs-symbol {
+                color: #e36209;
+            }
+            .hljs-code,
+            .hljs-comment,
+            .hljs-formula {
+                color: #6a737d;
+            }
+            .hljs-name,
+            .hljs-quote,
+            .hljs-selector-pseudo,
+            .hljs-selector-tag {
+                color: #22863a;
+            }
+            .hljs-subst {
+                color: #24292e;
+            }
+            .hljs-section {
+                color: #005cc5;
+                font-weight: bold;
+            }
+            .hljs-bullet {
+                color: #735c0f;
+            }
+            .hljs-emphasis {
+                color: #24292e;
+                font-style: italic;
+            }
+            .hljs-strong {
+                color: #24292e;
+                font-weight: bold;
+            }
+            .hljs-addition {
+                color: #22863a;
+                background-color: #f0fff4;
+            }
+            .hljs-deletion {
+                color: #b31d28;
+                background-color: #ffeef0;
+            }
+            .hljs-char.escape_,
+            .hljs-link,
+            .hljs-params,
+            .hljs-property,
+            .hljs-punctuation,
+            .hljs-tag {
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <header class="site-header">
     <a href="/" class="home">Brian Douglas</a>
 
     <div class="svg-container">
@@ -94,19 +235,20 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
     </div>
 </header>
 
-    <div class="breadcrumbs">
-        <a href="/">Home</a> / <span>Using astyle to format C code</span>
-    </div>
+            <div class="breadcrumbs">
+                <a href="/">Home</a> / <span>Using astyle to format C code</span>
+            </div>
 
-    <main>
-        <article class="post">
-            <header>
-                <h1>Using astyle to format C code</h1>
-                <time datetime="18/02/2025">February 18th, 2025</time>
-            </header>
+            <main>
+                <article class="post">
+                    <header>
+                        <h1>Using astyle to format C code</h1>
+                        <time datetime="18/02/2025"
+                            >February 18th, 2025</time
+                        >
+                    </header>
 
-            <div class="body">
-                <p>I've been writing C with a bare bones neovim install. But I miss code formatting.</p>
+                    <div class="body"><p>I've been writing C with a bare bones neovim install. But I miss code formatting.</p>
 <!-- more -->
 <p>A quick google pointed me in the direction of two different C code formatters,
 <em>indent</em> by gnu and <em>astyle</em> by someone else. I'm currently working on windows 
@@ -119,26 +261,25 @@ braces are the thinking man's braces. So now I format my C source code with this
 neat command:</p>
 <pre><code class="hljs">astyle <span class="hljs-params">--style=allman</span> <span class="hljs-params">--recursive</span> src/*<span class="hljs-string">.c</span>
 </code></pre>
-<p>Everything looks nice and tidy. Still no need for a complicated IDE.</p>
-            </div>
+<p>Everything looks nice and tidy. Still no need for a complicated IDE.</p></div>
 
-            <footer>
-                <p><i>Until next time,</i></p>
-                <p><i>Brian</i></p>
-            </footer>
-        </article>
-    </main>
+                    <footer>
+                        <p><i>Until next time,</i></p>
+                        <p><i>Brian</i></p>
+                    </footer>
+                </article>
+            </main>
 
-    <footer class="site-footer">
+            <footer class="site-footer">
     <p>
         <small>Since August 4th, 2023. All words by Brian
             Douglas. <a href="mailto:brianwdouglas@proton.me">Have a comment?</a></small>
     </p>
 </footer>
 
-</div>
+        </div>
 
-<script src="/scripts/chicken-and-magpie.js"></script>
-<script src="/scripts/skip-to-section.js"></script>
-</body>
+        <script src="/scripts/chicken-and-magpie.js"></script>
+        <script src="/scripts/skip-to-section.js"></script>
+    </body>
 </html>

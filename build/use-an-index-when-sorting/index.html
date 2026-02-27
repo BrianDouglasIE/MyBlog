@@ -21,12 +21,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <!-- Meta Description -->
-        <meta name="description" content="Neovim 0.12 adds vim.pack" />
+        <meta name="description" content="Use an index when sorting" />
 
         <!-- Keywords -->
         <meta
             name="keywords"
-            content="Brian Douglas, blog, neovim"
+            content="Brian Douglas, blog, sql"
         />
 
         <!-- Author -->
@@ -36,13 +36,13 @@
         <meta property="og:type" content="website" />
         <meta
             property="og:title"
-            content="BrianDouglas.ie - Neovim 0.12 adds vim.pack"
+            content="BrianDouglas.ie - Use an index when sorting"
         />
-        <meta property="og:description" content="Neovim 0.12 adds vim.pack" />
+        <meta property="og:description" content="Use an index when sorting" />
         <meta property="og:url" content="https://www.briandouglas.ie" />
         <meta
             property="og:image"
-            content="http://www.briandouglas.ie/images/og-images/vim-dot-pack.png"
+            content="http://www.briandouglas.ie/images/og-images/use-an-index-when-sorting.png"
         />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1280" />
@@ -50,7 +50,7 @@
         <meta property="og:site_name" content="BrianDouglas.ie" />
         <meta
             property="og:image:alt"
-            content="A preview image for the post titled 'Neovim 0.12 adds vim.pack'"
+            content="A preview image for the post titled 'Use an index when sorting'"
         />
 
         <!-- Twitter Meta -->
@@ -58,12 +58,12 @@
         <meta name="twitter:site" content="@BrianDouglasIE" />
         <meta
             name="twitter:title"
-            content="BrianDouglas.ie - Neovim 0.12 adds vim.pack"
+            content="BrianDouglas.ie - Use an index when sorting"
         />
-        <meta name="twitter:description" content="Neovim 0.12 adds vim.pack" />
+        <meta name="twitter:description" content="Use an index when sorting" />
         <meta
             name="twitter:image"
-            content="http://www.briandouglas.ie/images/og-images/vim-dot-pack.png"
+            content="http://www.briandouglas.ie/images/og-images/use-an-index-when-sorting.png"
         />
 
         <!-- Canonical URL -->
@@ -99,7 +99,7 @@
         />
         <link rel="manifest" href="/site.webmanifest" />
 
-        <title>Neovim 0.12 adds vim.pack</title>
+        <title>Use an index when sorting</title>
         <link rel="stylesheet" href="/styles.css" />
         <style>
             pre code.hljs {
@@ -236,35 +236,78 @@
 </header>
 
             <div class="breadcrumbs">
-                <a href="/">Home</a> / <span>Neovim 0.12 adds vim.pack</span>
+                <a href="/">Home</a> / <span>Use an index when sorting</span>
             </div>
 
             <main>
                 <article class="post">
                     <header>
-                        <h1>Neovim 0.12 adds vim.pack</h1>
-                        <time datetime="28/11/2025"
-                            >November 28th, 2025</time
+                        <h1>Use an index when sorting</h1>
+                        <time datetime="26/02/2026"
+                            >February 26th, 2026</time
                         >
                     </header>
 
-                    <div class="body"><p>It's a pain having to use external plugin managers for vim. It's always
-ircked me, and now I'm glad to see the neovim has added a builtin plugin
-manager as of 0.12.</p>
+                    <div class="body"><p>When working with a database it is a very common task to retrieve a sorted
+list of entities. What you might not realize is that this can be a very 
+expensive operation.</p>
 <!-- more -->
-<p>As of writing, 0.12 is the dev release. But I've been using it with no issues.</p>
-<p><magpie-trinket>This YouTube video explains the feature much better than Brian, <a href="https://www.youtube.com/watch?v=UE6XQTAxwE0">How to use vim.pack</a></magpie-trinket></p>
-<p>The new feature is called <em>vim.pack</em> and it has a super simple api consisting of <em>add</em>, <em>update</em>, and <em>del</em>.
-This allows you to use lua to manage your plugins with ease.</p>
-<p>So now to add plugins, take the url and pass it to <em>vim.pack.add</em> with all your other plugin urls.</p>
-<pre class="lua language-lua"><code class="hljs lua language-lua">vim.pack.add({
-  <span class="hljs-string">&#x27;https://github.com/neovim/nvim-lspconfig&#x27;</span>,
-  <span class="hljs-string">&#x27;https://github.com/nvim-treesitter/nvim-treesitter&#x27;</span>,
-  <span class="hljs-string">&#x27;https://github.com/nvim-lua/plenary.nvim&#x27;</span>,
-  <span class="hljs-string">&#x27;https://github.com/nvim-telescope/telescope.nvim&#x27;</span>,
-  <span class="hljs-comment">-- and so on</span>
-})
-</code></pre></div>
+<p>If an index is not present on the table which the select is being used on
+a filesort may be performed. This is what happens in the example below using
+MariaDB. When performing a file sort, the database fetches every row and sorts
+each in memory before performing a query, which in this case is selecting the
+first 10 results.</p>
+<p>Applying an index on the column you wish to sort by (<code>ORDER BY</code>) means that the
+database can skip the sort altogether. Instead of the previous scenario of
+fetching all rows and then sorting them, the index will allow it to just grab the
+first 10 entries.</p>
+<h2 id="thetopnquery">The Top-N query</h2>
+<p><magpie-trinket>He hasn't just made up the term <em>Top-N query</em> here is a reference and explantation from <a href="https://nightlies.apache.org/flink/flink-docs-master/docs/sql/reference/queries/topn/#:~:text=Top%2DN%20queries%20are%20useful,express%20a%20Top%2DN%20query.">Apache Flink</a>.</magpie-trinket></p>
+<p>A Top-N query is where you want to get the first N or last N results of table. It's
+a super common query to perform. But as we explained above, it can be very slow if used
+without an index.</p>
+<p>I'll be using the schema displayed below for each of the sql snippets in this post.
+The schema represents an example database that can be found on the
+<a href="https://www.mariadbtutorial.com/getting-started/mariadb-sample-database/">mariadbtutorial.com</a>
+website.</p>
+<p><img src="/images/nation-schema.png" alt="nation db schema" /></p>
+<p>You'll see from the above schema that each <code>countries</code> entity can have many <code>country_stats</code>
+entities. This means there is likely to be a lot of <code>county_stats</code> entities. So let's fetch
+the top 10 <code>country_stats</code> by population.</p>
+<pre class="sql language-sql"><code class="hljs sql language-sql"><span class="hljs-keyword">SELECT</span> country_id, population
+<span class="hljs-keyword">FROM</span> country_stats
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> population <span class="hljs-keyword">DESC</span>
+LIMIT <span class="hljs-number">10</span>;
+</code></pre>
+<p>Running the following query with <code>explain</code> tells me that 9514 rows were checked and that
+a filesort was performed. This confirms that I wrote above, when there is no index the
+database has to search through each row THEN do the sort.</p>
+<p>Let's fix this by adding an index on the <code>country_stats</code> table targeting the <code>population</code>
+column in descending order.</p>
+<pre class="sql language-sql"><code class="hljs sql language-sql"><span class="hljs-keyword">CREATE</span> INDEX idx_population_desc <span class="hljs-keyword">ON</span> country_stats (population <span class="hljs-keyword">DESC</span>);
+</code></pre>
+<p>Now when the original query is run, <code>explain</code> tells me that only 10 records were checked
+and that the <code>idx_population_desc</code> index was used.</p>
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Rows Checked</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Using filesort</td>
+            <td>9514</td>
+        </tr>
+        <tr>
+            <td>Using index</td>
+            <td>10</td>
+        </tr>
+    </tbody>
+</table>
+<p>So when doing a Top-N query make sure to add an index on the column and specify the order
+you wish to sort by.</p></div>
 
                     <footer>
                         <p><i>Until next time,</i></p>

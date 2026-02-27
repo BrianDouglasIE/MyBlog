@@ -1,63 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-SXTREFVFLB"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-    <!-- Meta Description -->
-    <meta name="description" content="Generate OG images for blog posts"/>
+            gtag("config", "G-SXTREFVFLB");
+        </script>
 
-    <!-- Keywords -->
-    <meta name="keywords" content="Brian Douglas, blog, node,js"/>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Author -->
-    <meta name="author" content="Brian Douglas"/>
+        <!-- Meta Description -->
+        <meta name="description" content="Generate OG images for blog posts" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="BrianDouglas.ie - Generate OG images for blog posts"/>
-    <meta property="og:description" content="Generate OG images for blog posts"/>
-    <meta property="og:url" content="https://www.briandouglas.ie"/>
-    <meta property="og:image" content="http://www.briandouglas.ie/images/og-images/generate-og-images-for-blog-posts.png"/>
-    <meta property="og:image:type" content="image/png"/>
-    <meta property="og:image:width" content="1280"/>
-    <meta property="og:image:height" content="640"/>
-    <meta property="og:site_name" content="BrianDouglas.ie"/>
-    <meta property="og:image:alt" content="A preview image for the post titled 'Generate OG images for blog posts'"/>
+        <!-- Keywords -->
+        <meta
+            name="keywords"
+            content="Brian Douglas, blog, node,js"
+        />
 
-    <!-- Twitter Meta -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@BrianDouglasIE"/>
-    <meta name="twitter:title" content="BrianDouglas.ie - Generate OG images for blog posts"/>
-    <meta name="twitter:description" content="Generate OG images for blog posts"/>
-    <meta name="twitter:image" content="http://www.briandouglas.ie/images/og-images/generate-og-images-for-blog-posts.png"/>
+        <!-- Author -->
+        <meta name="author" content="Brian Douglas" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.briandouglas.ie"/>
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="BrianDouglas.ie - Generate OG images for blog posts"
+        />
+        <meta property="og:description" content="Generate OG images for blog posts" />
+        <meta property="og:url" content="https://www.briandouglas.ie" />
+        <meta
+            property="og:image"
+            content="http://www.briandouglas.ie/images/og-images/generate-og-images-for-blog-posts.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta property="og:site_name" content="BrianDouglas.ie" />
+        <meta
+            property="og:image:alt"
+            content="A preview image for the post titled 'Generate OG images for blog posts'"
+        />
 
-    <!-- Favicon (Optional) -->
-    <link rel="icon" href="https://www.briandouglas.ie/favicon.ico" type="image/x-icon"/>
+        <!-- Twitter Meta -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@BrianDouglasIE" />
+        <meta
+            name="twitter:title"
+            content="BrianDouglas.ie - Generate OG images for blog posts"
+        />
+        <meta name="twitter:description" content="Generate OG images for blog posts" />
+        <meta
+            name="twitter:image"
+            content="http://www.briandouglas.ie/images/og-images/generate-og-images-for-blog-posts.png"
+        />
 
-    <!-- Robots -->
-    <meta name="robots" content="index, follow"/>
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://www.briandouglas.ie" />
 
-    <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-    <link rel="manifest" href="/site.webmanifest"/>
+        <!-- Favicon (Optional) -->
+        <link
+            rel="icon"
+            href="https://www.briandouglas.ie/favicon.ico"
+            type="image/x-icon"
+        />
 
-    <title>Generate OG images for blog posts</title>
-    <link rel="stylesheet" href="/styles.css">
-    <style>
-pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#24292e;background:#ffffff}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#d73a49}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#6f42c1}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#005cc5}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#032f62}.hljs-built_in,.hljs-symbol{color:#e36209}.hljs-code,.hljs-comment,.hljs-formula{color:#6a737d}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#22863a}.hljs-subst{color:#24292e}.hljs-section{color:#005cc5;font-weight:bold}.hljs-bullet{color:#735c0f}.hljs-emphasis{color:#24292e;font-style:italic}.hljs-strong{color:#24292e;font-weight:bold}.hljs-addition{color:#22863a;background-color:#f0fff4}.hljs-deletion{color:#b31d28;background-color:#ffeef0}.hljs-char.escape_,.hljs-link,.hljs-params,.hljs-property,.hljs-punctuation,.hljs-tag{}
-    </style>
-</head>
-<body>
+        <!-- Robots -->
+        <meta name="robots" content="index, follow" />
 
-<div class="content">
-    <header class="site-header">
+        <!-- Favicon-->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <title>Generate OG images for blog posts</title>
+        <link rel="stylesheet" href="/styles.css" />
+        <style>
+            pre code.hljs {
+                display: block;
+                overflow-x: auto;
+                padding: 1em;
+            }
+            code.hljs {
+                padding: 3px 5px;
+            }
+            .hljs {
+                color: #24292e;
+                background: #ffffff;
+            }
+            .hljs-doctag,
+            .hljs-keyword,
+            .hljs-meta .hljs-keyword,
+            .hljs-template-tag,
+            .hljs-template-variable,
+            .hljs-type,
+            .hljs-variable.language_ {
+                color: #d73a49;
+            }
+            .hljs-title,
+            .hljs-title.class_,
+            .hljs-title.class_.inherited__,
+            .hljs-title.function_ {
+                color: #6f42c1;
+            }
+            .hljs-attr,
+            .hljs-attribute,
+            .hljs-literal,
+            .hljs-meta,
+            .hljs-number,
+            .hljs-operator,
+            .hljs-selector-attr,
+            .hljs-selector-class,
+            .hljs-selector-id,
+            .hljs-variable {
+                color: #005cc5;
+            }
+            .hljs-meta .hljs-string,
+            .hljs-regexp,
+            .hljs-string {
+                color: #032f62;
+            }
+            .hljs-built_in,
+            .hljs-symbol {
+                color: #e36209;
+            }
+            .hljs-code,
+            .hljs-comment,
+            .hljs-formula {
+                color: #6a737d;
+            }
+            .hljs-name,
+            .hljs-quote,
+            .hljs-selector-pseudo,
+            .hljs-selector-tag {
+                color: #22863a;
+            }
+            .hljs-subst {
+                color: #24292e;
+            }
+            .hljs-section {
+                color: #005cc5;
+                font-weight: bold;
+            }
+            .hljs-bullet {
+                color: #735c0f;
+            }
+            .hljs-emphasis {
+                color: #24292e;
+                font-style: italic;
+            }
+            .hljs-strong {
+                color: #24292e;
+                font-weight: bold;
+            }
+            .hljs-addition {
+                color: #22863a;
+                background-color: #f0fff4;
+            }
+            .hljs-deletion {
+                color: #b31d28;
+                background-color: #ffeef0;
+            }
+            .hljs-char.escape_,
+            .hljs-link,
+            .hljs-params,
+            .hljs-property,
+            .hljs-punctuation,
+            .hljs-tag {
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <header class="site-header">
     <a href="/" class="home">Brian Douglas</a>
 
     <div class="svg-container">
@@ -94,19 +235,20 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
     </div>
 </header>
 
-    <div class="breadcrumbs">
-        <a href="/">Home</a> / <span>Generate OG images for blog posts</span>
-    </div>
+            <div class="breadcrumbs">
+                <a href="/">Home</a> / <span>Generate OG images for blog posts</span>
+            </div>
 
-    <main>
-        <article class="post">
-            <header>
-                <h1>Generate OG images for blog posts</h1>
-                <time datetime="07/09/2024">September 7th, 2024</time>
-            </header>
+            <main>
+                <article class="post">
+                    <header>
+                        <h1>Generate OG images for blog posts</h1>
+                        <time datetime="07/09/2024"
+                            >September 7th, 2024</time
+                        >
+                    </header>
 
-            <div class="body">
-                <p>When sharing an article on social media you will see a preview. The preview uses the html <code>og:image</code> meta tag. In this
+                    <div class="body"><p>When sharing an article on social media you will see a preview. The preview uses the html <code>og:image</code> meta tag. In this
 article I will demonstrate how I generate a unique <code>og:image</code> for each of my blog posts.</p>
 <!-- more -->
 <p>The general gist here is that we want to create a method that will take the title of our post and generate an image
@@ -248,26 +390,25 @@ below image.</p>
 <p>Unfortunately as you can see from the image, the library we used (<code>PureImage</code>) isn't great at rendering fonts. So the font 
 looks a little choppy. Potentially a different library would do a better job. Alternatively we could use a tool like 
 webdriver.io or selenium to render the template as html and save it as an image which may yield better results. For me
-however, the current implementation will suffice.</p>
-            </div>
+however, the current implementation will suffice.</p></div>
 
-            <footer>
-                <p><i>Until next time,</i></p>
-                <p><i>Brian</i></p>
-            </footer>
-        </article>
-    </main>
+                    <footer>
+                        <p><i>Until next time,</i></p>
+                        <p><i>Brian</i></p>
+                    </footer>
+                </article>
+            </main>
 
-    <footer class="site-footer">
+            <footer class="site-footer">
     <p>
         <small>Since August 4th, 2023. All words by Brian
             Douglas. <a href="mailto:brianwdouglas@proton.me">Have a comment?</a></small>
     </p>
 </footer>
 
-</div>
+        </div>
 
-<script src="/scripts/chicken-and-magpie.js"></script>
-<script src="/scripts/skip-to-section.js"></script>
-</body>
+        <script src="/scripts/chicken-and-magpie.js"></script>
+        <script src="/scripts/skip-to-section.js"></script>
+    </body>
 </html>

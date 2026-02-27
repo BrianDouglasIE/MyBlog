@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-SXTREFVFLB"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-SXTREFVFLB");
+        </script>
+
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -149,6 +164,27 @@
                     <li>
                         <article>
                             <header>
+                                <a href="use-an-index-when-sorting"
+                                    ><h3>Use an index when sorting</h3></a
+                                >
+                                <time datetime="26/02/2026"
+                                    >February 26th, 2026</time
+                                >
+                            </header>
+
+                            <div><p>When working with a database it is a very common task to retrieve a sorted
+list of entities. What you might not realize is that this can be a very 
+expensive operation.</p></div>
+
+                            <footer>
+                                <a href="use-an-index-when-sorting">Read more</a>
+                            </footer>
+                        </article>
+                    </li>
+                    
+                    <li>
+                        <article>
+                            <header>
                                 <a href="http-status-codes-table"
                                     ><h3>http_status_codes table</h3></a
                                 >
@@ -157,13 +193,12 @@
                                 >
                             </header>
 
-                            <div><p>I've been doing a lot of web scraping for various AI tools. This includes model training, and
-search functionality. One thing I find myself doing is generating lots of prototypes. Each prototype
-requires me to write a new db schema and one thing they share in common is the need for a 
-<code>http_status_codes</code> table to record the final status response of a web page. You could store the value
-as an int, or string, or even as json to make it queryable. But I feel taking the time to create and
-populate a table of the code is much more advantageous for queries and for indexing. So to help future
-Brian I have pasted the code used to generate this table below.</p></div>
+                            <div><p>I've been doing a lot of web scraping for various AI tools. This includes model training, and search functionality. 
+One thing I find myself doing is generating lots of prototypes. </p>
+<p>Each prototype requires me to write a new db schema and one thing they share in common is the need for a <code>http_status_codes</code>
+table to record the final status response of a web page. You could store the value as an int, or string, or even as json to 
+make it queryable. But I feel taking the time to create and populate a table of the status codes is much more advantageous 
+for querying and indexing. So to help future Brian I have pasted the code used to generate this table below.</p></div>
 
                             <footer>
                                 <a href="http-status-codes-table">Read more</a>
@@ -191,36 +226,23 @@ used to connect did not support Typescript generics. This was something I felt I
                         </article>
                     </li>
                     
-                    <li>
-                        <article>
-                            <header>
-                                <a href="normalize-tag-tables"
-                                    ><h3>Modeling Tags in a Postgres schema</h3></a
-                                >
-                                <time datetime="16/02/2026"
-                                    >February 16th, 2026</time
-                                >
-                            </header>
-
-                            <div><p>When working on a db schema to model the <a href="https://ogp.me">OpenGraph protocol</a> I made an initial mistake with
-how I modelled tags within the database.</p></div>
-
-                            <footer>
-                                <a href="normalize-tag-tables">Read more</a>
-                            </footer>
-                        </article>
-                    </li>
-                    
                 </ul>
 
-                <h2>All Posts <i>(84)</i></h2>
+                <h2>All Posts <i>(85)</i></h2>
                 <ul class="post-title-list">
                     
                     <li>
                         <h3>
                             2026 -
-                            <i><small>7 posts</small></i>
+                            <i><small>8 posts</small></i>
                         </h3>
+                    </li>
+                    
+                    <li>
+                        <time datetime="26/02/2026"
+                            >26/02</time
+                        >
+                        <a href="use-an-index-when-sorting">Use an index when sorting</a>
                     </li>
                     
                     <li>

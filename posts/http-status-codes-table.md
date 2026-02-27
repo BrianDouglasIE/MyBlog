@@ -4,13 +4,13 @@ tags: [sql]
 date: 23/02/2026
 ---
 
-I've been doing a lot of web scraping for various AI tools. This includes model training, and
-search functionality. One thing I find myself doing is generating lots of prototypes. Each prototype
-requires me to write a new db schema and one thing they share in common is the need for a 
-`http_status_codes` table to record the final status response of a web page. You could store the value
-as an int, or string, or even as json to make it queryable. But I feel taking the time to create and
-populate a table of the code is much more advantageous for queries and for indexing. So to help future
-Brian I have pasted the code used to generate this table below.
+I've been doing a lot of web scraping for various AI tools. This includes model training, and search functionality. 
+One thing I find myself doing is generating lots of prototypes. 
+
+Each prototype requires me to write a new db schema and one thing they share in common is the need for a `http_status_codes`
+table to record the final status response of a web page. You could store the value as an int, or string, or even as json to 
+make it queryable. But I feel taking the time to create and populate a table of the status codes is much more advantageous 
+for querying and indexing. So to help future Brian I have pasted the code used to generate this table below.
 
 <!-- more -->
 
@@ -20,84 +20,87 @@ The overall architecture of the project however is my job.
 
 <magpie-trinket>Run the below script in MariaDB like so `mariadb -u uname -p dbname < http_status_codes.sql`</magpie-trinket>
 
+The below snippet creates the `http_status_codes` table and populates it. I've added a condition on the population
+of the data. This is to allow the snippet to be added as a migration, which may be run multiple times. The dialect
+used here is for MariaDB.
+
 ```sql
 CREATE TABLE IF NOT EXISTS http_status_codes (
     code SMALLINT PRIMARY KEY,
     description VARCHAR(255) NOT NULL
 ) COMMENT = 'Standard HTTP status codes with brief descriptions';
 
-INSERT INTO http_status_codes (code, description) VALUES
--- 1xx Informational
-(100, 'Continue'),
-(101, 'Switching Protocols'),
-(102, 'Processing'),
-(103, 'Early Hints'),
+INSERT INTO http_status_codes (code, description)
+SELECT *
+FROM (
+    SELECT 100, 'Continue' UNION ALL
+    SELECT 101, 'Switching Protocols' UNION ALL
+    SELECT 102, 'Processing' UNION ALL
+    SELECT 103, 'Early Hints' UNION ALL
 
--- 2xx Success
-(200, 'OK'),
-(201, 'Created'),
-(202, 'Accepted'),
-(203, 'Non-Authoritative Information'),
-(204, 'No Content'),
-(205, 'Reset Content'),
-(206, 'Partial Content'),
-(207, 'Multi-Status'),
-(208, 'Already Reported'),
-(226, 'IM Used'),
+    SELECT 200, 'OK' UNION ALL
+    SELECT 201, 'Created' UNION ALL
+    SELECT 202, 'Accepted' UNION ALL
+    SELECT 203, 'Non-Authoritative Information' UNION ALL
+    SELECT 204, 'No Content' UNION ALL
+    SELECT 205, 'Reset Content' UNION ALL
+    SELECT 206, 'Partial Content' UNION ALL
+    SELECT 207, 'Multi-Status' UNION ALL
+    SELECT 208, 'Already Reported' UNION ALL
+    SELECT 226, 'IM Used' UNION ALL
 
--- 3xx Redirection
-(300, 'Multiple Choices'),
-(301, 'Moved Permanently'),
-(302, 'Found'),
-(303, 'See Other'),
-(304, 'Not Modified'),
-(305, 'Use Proxy'),
-(307, 'Temporary Redirect'),
-(308, 'Permanent Redirect'),
+    SELECT 300, 'Multiple Choices' UNION ALL
+    SELECT 301, 'Moved Permanently' UNION ALL
+    SELECT 302, 'Found' UNION ALL
+    SELECT 303, 'See Other' UNION ALL
+    SELECT 304, 'Not Modified' UNION ALL
+    SELECT 305, 'Use Proxy' UNION ALL
+    SELECT 307, 'Temporary Redirect' UNION ALL
+    SELECT 308, 'Permanent Redirect' UNION ALL
 
--- 4xx Client Errors
-(400, 'Bad Request'),
-(401, 'Unauthorized'),
-(402, 'Payment Required'),
-(403, 'Forbidden'),
-(404, 'Not Found'),
-(405, 'Method Not Allowed'),
-(406, 'Not Acceptable'),
-(407, 'Proxy Authentication Required'),
-(408, 'Request Timeout'),
-(409, 'Conflict'),
-(410, 'Gone'),
-(411, 'Length Required'),
-(412, 'Precondition Failed'),
-(413, 'Payload Too Large'),
-(414, 'URI Too Long'),
-(415, 'Unsupported Media Type'),
-(416, 'Range Not Satisfiable'),
-(417, 'Expectation Failed'),
-(418, 'I\'m a teapot'),
-(421, 'Misdirected Request'),
-(422, 'Unprocessable Entity'),
-(423, 'Locked'),
-(424, 'Failed Dependency'),
-(425, 'Too Early'),
-(426, 'Upgrade Required'),
-(428, 'Precondition Required'),
-(429, 'Too Many Requests'),
-(431, 'Request Header Fields Too Large'),
-(451, 'Unavailable For Legal Reasons'),
+    SELECT 400, 'Bad Request' UNION ALL
+    SELECT 401, 'Unauthorized' UNION ALL
+    SELECT 402, 'Payment Required' UNION ALL
+    SELECT 403, 'Forbidden' UNION ALL
+    SELECT 404, 'Not Found' UNION ALL
+    SELECT 405, 'Method Not Allowed' UNION ALL
+    SELECT 406, 'Not Acceptable' UNION ALL
+    SELECT 407, 'Proxy Authentication Required' UNION ALL
+    SELECT 408, 'Request Timeout' UNION ALL
+    SELECT 409, 'Conflict' UNION ALL
+    SELECT 410, 'Gone' UNION ALL
+    SELECT 411, 'Length Required' UNION ALL
+    SELECT 412, 'Precondition Failed' UNION ALL
+    SELECT 413, 'Payload Too Large' UNION ALL
+    SELECT 414, 'URI Too Long' UNION ALL
+    SELECT 415, 'Unsupported Media Type' UNION ALL
+    SELECT 416, 'Range Not Satisfiable' UNION ALL
+    SELECT 417, 'Expectation Failed' UNION ALL
+    SELECT 418, 'I''m a teapot' UNION ALL
+    SELECT 421, 'Misdirected Request' UNION ALL
+    SELECT 422, 'Unprocessable Entity' UNION ALL
+    SELECT 423, 'Locked' UNION ALL
+    SELECT 424, 'Failed Dependency' UNION ALL
+    SELECT 425, 'Too Early' UNION ALL
+    SELECT 426, 'Upgrade Required' UNION ALL
+    SELECT 428, 'Precondition Required' UNION ALL
+    SELECT 429, 'Too Many Requests' UNION ALL
+    SELECT 431, 'Request Header Fields Too Large' UNION ALL
+    SELECT 451, 'Unavailable For Legal Reasons' UNION ALL
 
--- 5xx Server Errors
-(500, 'Internal Server Error'),
-(501, 'Not Implemented'),
-(502, 'Bad Gateway'),
-(503, 'Service Unavailable'),
-(504, 'Gateway Timeout'),
-(505, 'HTTP Version Not Supported'),
-(506, 'Variant Also Negotiates'),
-(507, 'Insufficient Storage'),
-(508, 'Loop Detected'),
-(510, 'Not Extended'),
-(511, 'Network Authentication Required');
+    SELECT 500, 'Internal Server Error' UNION ALL
+    SELECT 501, 'Not Implemented' UNION ALL
+    SELECT 502, 'Bad Gateway' UNION ALL
+    SELECT 503, 'Service Unavailable' UNION ALL
+    SELECT 504, 'Gateway Timeout' UNION ALL
+    SELECT 505, 'HTTP Version Not Supported' UNION ALL
+    SELECT 506, 'Variant Also Negotiates' UNION ALL
+    SELECT 507, 'Insufficient Storage' UNION ALL
+    SELECT 508, 'Loop Detected' UNION ALL
+    SELECT 510, 'Not Extended' UNION ALL
+    SELECT 511, 'Network Authentication Required'
+) AS seed_data
+WHERE NOT EXISTS (SELECT 1 FROM http_status_codes);
 ```
 
 Now if I wanted to link all page responses by status code I can write a query like the one below.

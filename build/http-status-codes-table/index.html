@@ -1,63 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-SXTREFVFLB"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-    <!-- Meta Description -->
-    <meta name="description" content="http_status_codes table"/>
+            gtag("config", "G-SXTREFVFLB");
+        </script>
 
-    <!-- Keywords -->
-    <meta name="keywords" content="Brian Douglas, blog, sql"/>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Author -->
-    <meta name="author" content="Brian Douglas"/>
+        <!-- Meta Description -->
+        <meta name="description" content="http_status_codes table" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="BrianDouglas.ie - http_status_codes table"/>
-    <meta property="og:description" content="http_status_codes table"/>
-    <meta property="og:url" content="https://www.briandouglas.ie"/>
-    <meta property="og:image" content="http://www.briandouglas.ie/images/og-images/http-status-codes-table.png"/>
-    <meta property="og:image:type" content="image/png"/>
-    <meta property="og:image:width" content="1280"/>
-    <meta property="og:image:height" content="640"/>
-    <meta property="og:site_name" content="BrianDouglas.ie"/>
-    <meta property="og:image:alt" content="A preview image for the post titled 'http_status_codes table'"/>
+        <!-- Keywords -->
+        <meta
+            name="keywords"
+            content="Brian Douglas, blog, sql"
+        />
 
-    <!-- Twitter Meta -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@BrianDouglasIE"/>
-    <meta name="twitter:title" content="BrianDouglas.ie - http_status_codes table"/>
-    <meta name="twitter:description" content="http_status_codes table"/>
-    <meta name="twitter:image" content="http://www.briandouglas.ie/images/og-images/http-status-codes-table.png"/>
+        <!-- Author -->
+        <meta name="author" content="Brian Douglas" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.briandouglas.ie"/>
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="BrianDouglas.ie - http_status_codes table"
+        />
+        <meta property="og:description" content="http_status_codes table" />
+        <meta property="og:url" content="https://www.briandouglas.ie" />
+        <meta
+            property="og:image"
+            content="http://www.briandouglas.ie/images/og-images/http-status-codes-table.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta property="og:site_name" content="BrianDouglas.ie" />
+        <meta
+            property="og:image:alt"
+            content="A preview image for the post titled 'http_status_codes table'"
+        />
 
-    <!-- Favicon (Optional) -->
-    <link rel="icon" href="https://www.briandouglas.ie/favicon.ico" type="image/x-icon"/>
+        <!-- Twitter Meta -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@BrianDouglasIE" />
+        <meta
+            name="twitter:title"
+            content="BrianDouglas.ie - http_status_codes table"
+        />
+        <meta name="twitter:description" content="http_status_codes table" />
+        <meta
+            name="twitter:image"
+            content="http://www.briandouglas.ie/images/og-images/http-status-codes-table.png"
+        />
 
-    <!-- Robots -->
-    <meta name="robots" content="index, follow"/>
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://www.briandouglas.ie" />
 
-    <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-    <link rel="manifest" href="/site.webmanifest"/>
+        <!-- Favicon (Optional) -->
+        <link
+            rel="icon"
+            href="https://www.briandouglas.ie/favicon.ico"
+            type="image/x-icon"
+        />
 
-    <title>http_status_codes table</title>
-    <link rel="stylesheet" href="/styles.css">
-    <style>
-pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#24292e;background:#ffffff}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#d73a49}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#6f42c1}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#005cc5}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#032f62}.hljs-built_in,.hljs-symbol{color:#e36209}.hljs-code,.hljs-comment,.hljs-formula{color:#6a737d}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#22863a}.hljs-subst{color:#24292e}.hljs-section{color:#005cc5;font-weight:bold}.hljs-bullet{color:#735c0f}.hljs-emphasis{color:#24292e;font-style:italic}.hljs-strong{color:#24292e;font-weight:bold}.hljs-addition{color:#22863a;background-color:#f0fff4}.hljs-deletion{color:#b31d28;background-color:#ffeef0}.hljs-char.escape_,.hljs-link,.hljs-params,.hljs-property,.hljs-punctuation,.hljs-tag{}
-    </style>
-</head>
-<body>
+        <!-- Robots -->
+        <meta name="robots" content="index, follow" />
 
-<div class="content">
-    <header class="site-header">
+        <!-- Favicon-->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <title>http_status_codes table</title>
+        <link rel="stylesheet" href="/styles.css" />
+        <style>
+            pre code.hljs {
+                display: block;
+                overflow-x: auto;
+                padding: 1em;
+            }
+            code.hljs {
+                padding: 3px 5px;
+            }
+            .hljs {
+                color: #24292e;
+                background: #ffffff;
+            }
+            .hljs-doctag,
+            .hljs-keyword,
+            .hljs-meta .hljs-keyword,
+            .hljs-template-tag,
+            .hljs-template-variable,
+            .hljs-type,
+            .hljs-variable.language_ {
+                color: #d73a49;
+            }
+            .hljs-title,
+            .hljs-title.class_,
+            .hljs-title.class_.inherited__,
+            .hljs-title.function_ {
+                color: #6f42c1;
+            }
+            .hljs-attr,
+            .hljs-attribute,
+            .hljs-literal,
+            .hljs-meta,
+            .hljs-number,
+            .hljs-operator,
+            .hljs-selector-attr,
+            .hljs-selector-class,
+            .hljs-selector-id,
+            .hljs-variable {
+                color: #005cc5;
+            }
+            .hljs-meta .hljs-string,
+            .hljs-regexp,
+            .hljs-string {
+                color: #032f62;
+            }
+            .hljs-built_in,
+            .hljs-symbol {
+                color: #e36209;
+            }
+            .hljs-code,
+            .hljs-comment,
+            .hljs-formula {
+                color: #6a737d;
+            }
+            .hljs-name,
+            .hljs-quote,
+            .hljs-selector-pseudo,
+            .hljs-selector-tag {
+                color: #22863a;
+            }
+            .hljs-subst {
+                color: #24292e;
+            }
+            .hljs-section {
+                color: #005cc5;
+                font-weight: bold;
+            }
+            .hljs-bullet {
+                color: #735c0f;
+            }
+            .hljs-emphasis {
+                color: #24292e;
+                font-style: italic;
+            }
+            .hljs-strong {
+                color: #24292e;
+                font-weight: bold;
+            }
+            .hljs-addition {
+                color: #22863a;
+                background-color: #f0fff4;
+            }
+            .hljs-deletion {
+                color: #b31d28;
+                background-color: #ffeef0;
+            }
+            .hljs-char.escape_,
+            .hljs-link,
+            .hljs-params,
+            .hljs-property,
+            .hljs-punctuation,
+            .hljs-tag {
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <header class="site-header">
     <a href="/" class="home">Brian Douglas</a>
 
     <div class="svg-container">
@@ -94,133 +235,134 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
     </div>
 </header>
 
-    <div class="breadcrumbs">
-        <a href="/">Home</a> / <span>http_status_codes table</span>
-    </div>
+            <div class="breadcrumbs">
+                <a href="/">Home</a> / <span>http_status_codes table</span>
+            </div>
 
-    <main>
-        <article class="post">
-            <header>
-                <h1>http_status_codes table</h1>
-                <time datetime="23/02/2026">February 23rd, 2026</time>
-            </header>
+            <main>
+                <article class="post">
+                    <header>
+                        <h1>http_status_codes table</h1>
+                        <time datetime="23/02/2026"
+                            >February 23rd, 2026</time
+                        >
+                    </header>
 
-            <div class="body">
-                <p>I've been doing a lot of web scraping for various AI tools. This includes model training, and
-search functionality. One thing I find myself doing is generating lots of prototypes. Each prototype
-requires me to write a new db schema and one thing they share in common is the need for a 
-<code>http_status_codes</code> table to record the final status response of a web page. You could store the value
-as an int, or string, or even as json to make it queryable. But I feel taking the time to create and
-populate a table of the code is much more advantageous for queries and for indexing. So to help future
-Brian I have pasted the code used to generate this table below.</p>
+                    <div class="body"><p>I've been doing a lot of web scraping for various AI tools. This includes model training, and search functionality. 
+One thing I find myself doing is generating lots of prototypes. </p>
+<p>Each prototype requires me to write a new db schema and one thing they share in common is the need for a <code>http_status_codes</code>
+table to record the final status response of a web page. You could store the value as an int, or string, or even as json to 
+make it queryable. But I feel taking the time to create and populate a table of the status codes is much more advantageous 
+for querying and indexing. So to help future Brian I have pasted the code used to generate this table below.</p>
 <!-- more -->
 <p>This code is generated by an AI model. Which is a great use for models, as this is just boilerplate.
 It would make no sense for me to type this out. Mundane stuff like this is a clear use case for AI.
 The overall architecture of the project however is my job.</p>
 <p><magpie-trinket>Run the below script in MariaDB like so <code>mariadb -u uname -p dbname &lt; http_status_codes.sql</code></magpie-trinket></p>
+<p>The below snippet creates the <code>http_status_codes</code> table and populates it. I've added a condition on the population
+of the data. This is to allow the snippet to be added as a migration, which may be run multiple times. The dialect
+used here is for MariaDB.</p>
 <pre class="sql language-sql"><code class="hljs sql language-sql"><span class="hljs-keyword">CREATE TABLE</span> IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> http_status_codes (
     code <span class="hljs-type">SMALLINT</span> <span class="hljs-keyword">PRIMARY KEY</span>,
     description <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT NULL</span>
 ) COMMENT <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;Standard HTTP status codes with brief descriptions&#x27;</span>;
 
-<span class="hljs-keyword">INSERT INTO</span> http_status_codes (code, description) <span class="hljs-keyword">VALUES</span>
-<span class="hljs-comment">-- 1xx Informational</span>
-(<span class="hljs-number">100</span>, <span class="hljs-string">&#x27;Continue&#x27;</span>),
-(<span class="hljs-number">101</span>, <span class="hljs-string">&#x27;Switching Protocols&#x27;</span>),
-(<span class="hljs-number">102</span>, <span class="hljs-string">&#x27;Processing&#x27;</span>),
-(<span class="hljs-number">103</span>, <span class="hljs-string">&#x27;Early Hints&#x27;</span>),
+<span class="hljs-keyword">INSERT INTO</span> http_status_codes (code, description)
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span>
+<span class="hljs-keyword">FROM</span> (
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">100</span>, <span class="hljs-string">&#x27;Continue&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">101</span>, <span class="hljs-string">&#x27;Switching Protocols&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">102</span>, <span class="hljs-string">&#x27;Processing&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">103</span>, <span class="hljs-string">&#x27;Early Hints&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
 
-<span class="hljs-comment">-- 2xx Success</span>
-(<span class="hljs-number">200</span>, <span class="hljs-string">&#x27;OK&#x27;</span>),
-(<span class="hljs-number">201</span>, <span class="hljs-string">&#x27;Created&#x27;</span>),
-(<span class="hljs-number">202</span>, <span class="hljs-string">&#x27;Accepted&#x27;</span>),
-(<span class="hljs-number">203</span>, <span class="hljs-string">&#x27;Non-Authoritative Information&#x27;</span>),
-(<span class="hljs-number">204</span>, <span class="hljs-string">&#x27;No Content&#x27;</span>),
-(<span class="hljs-number">205</span>, <span class="hljs-string">&#x27;Reset Content&#x27;</span>),
-(<span class="hljs-number">206</span>, <span class="hljs-string">&#x27;Partial Content&#x27;</span>),
-(<span class="hljs-number">207</span>, <span class="hljs-string">&#x27;Multi-Status&#x27;</span>),
-(<span class="hljs-number">208</span>, <span class="hljs-string">&#x27;Already Reported&#x27;</span>),
-(<span class="hljs-number">226</span>, <span class="hljs-string">&#x27;IM Used&#x27;</span>),
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">200</span>, <span class="hljs-string">&#x27;OK&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">201</span>, <span class="hljs-string">&#x27;Created&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">202</span>, <span class="hljs-string">&#x27;Accepted&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">203</span>, <span class="hljs-string">&#x27;Non-Authoritative Information&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">204</span>, <span class="hljs-string">&#x27;No Content&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">205</span>, <span class="hljs-string">&#x27;Reset Content&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">206</span>, <span class="hljs-string">&#x27;Partial Content&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">207</span>, <span class="hljs-string">&#x27;Multi-Status&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">208</span>, <span class="hljs-string">&#x27;Already Reported&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">226</span>, <span class="hljs-string">&#x27;IM Used&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
 
-<span class="hljs-comment">-- 3xx Redirection</span>
-(<span class="hljs-number">300</span>, <span class="hljs-string">&#x27;Multiple Choices&#x27;</span>),
-(<span class="hljs-number">301</span>, <span class="hljs-string">&#x27;Moved Permanently&#x27;</span>),
-(<span class="hljs-number">302</span>, <span class="hljs-string">&#x27;Found&#x27;</span>),
-(<span class="hljs-number">303</span>, <span class="hljs-string">&#x27;See Other&#x27;</span>),
-(<span class="hljs-number">304</span>, <span class="hljs-string">&#x27;Not Modified&#x27;</span>),
-(<span class="hljs-number">305</span>, <span class="hljs-string">&#x27;Use Proxy&#x27;</span>),
-(<span class="hljs-number">307</span>, <span class="hljs-string">&#x27;Temporary Redirect&#x27;</span>),
-(<span class="hljs-number">308</span>, <span class="hljs-string">&#x27;Permanent Redirect&#x27;</span>),
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">300</span>, <span class="hljs-string">&#x27;Multiple Choices&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">301</span>, <span class="hljs-string">&#x27;Moved Permanently&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">302</span>, <span class="hljs-string">&#x27;Found&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">303</span>, <span class="hljs-string">&#x27;See Other&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">304</span>, <span class="hljs-string">&#x27;Not Modified&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">305</span>, <span class="hljs-string">&#x27;Use Proxy&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">307</span>, <span class="hljs-string">&#x27;Temporary Redirect&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">308</span>, <span class="hljs-string">&#x27;Permanent Redirect&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
 
-<span class="hljs-comment">-- 4xx Client Errors</span>
-(<span class="hljs-number">400</span>, <span class="hljs-string">&#x27;Bad Request&#x27;</span>),
-(<span class="hljs-number">401</span>, <span class="hljs-string">&#x27;Unauthorized&#x27;</span>),
-(<span class="hljs-number">402</span>, <span class="hljs-string">&#x27;Payment Required&#x27;</span>),
-(<span class="hljs-number">403</span>, <span class="hljs-string">&#x27;Forbidden&#x27;</span>),
-(<span class="hljs-number">404</span>, <span class="hljs-string">&#x27;Not Found&#x27;</span>),
-(<span class="hljs-number">405</span>, <span class="hljs-string">&#x27;Method Not Allowed&#x27;</span>),
-(<span class="hljs-number">406</span>, <span class="hljs-string">&#x27;Not Acceptable&#x27;</span>),
-(<span class="hljs-number">407</span>, <span class="hljs-string">&#x27;Proxy Authentication Required&#x27;</span>),
-(<span class="hljs-number">408</span>, <span class="hljs-string">&#x27;Request Timeout&#x27;</span>),
-(<span class="hljs-number">409</span>, <span class="hljs-string">&#x27;Conflict&#x27;</span>),
-(<span class="hljs-number">410</span>, <span class="hljs-string">&#x27;Gone&#x27;</span>),
-(<span class="hljs-number">411</span>, <span class="hljs-string">&#x27;Length Required&#x27;</span>),
-(<span class="hljs-number">412</span>, <span class="hljs-string">&#x27;Precondition Failed&#x27;</span>),
-(<span class="hljs-number">413</span>, <span class="hljs-string">&#x27;Payload Too Large&#x27;</span>),
-(<span class="hljs-number">414</span>, <span class="hljs-string">&#x27;URI Too Long&#x27;</span>),
-(<span class="hljs-number">415</span>, <span class="hljs-string">&#x27;Unsupported Media Type&#x27;</span>),
-(<span class="hljs-number">416</span>, <span class="hljs-string">&#x27;Range Not Satisfiable&#x27;</span>),
-(<span class="hljs-number">417</span>, <span class="hljs-string">&#x27;Expectation Failed&#x27;</span>),
-(<span class="hljs-number">418</span>, <span class="hljs-string">&#x27;I\&#x27;</span>m a teapot<span class="hljs-string">&#x27;),
-(421, &#x27;</span>Misdirected Request<span class="hljs-string">&#x27;),
-(422, &#x27;</span>Unprocessable Entity<span class="hljs-string">&#x27;),
-(423, &#x27;</span>Locked<span class="hljs-string">&#x27;),
-(424, &#x27;</span>Failed Dependency<span class="hljs-string">&#x27;),
-(425, &#x27;</span>Too Early<span class="hljs-string">&#x27;),
-(426, &#x27;</span>Upgrade Required<span class="hljs-string">&#x27;),
-(428, &#x27;</span>Precondition Required<span class="hljs-string">&#x27;),
-(429, &#x27;</span>Too Many Requests<span class="hljs-string">&#x27;),
-(431, &#x27;</span>Request Header Fields Too <span class="hljs-keyword">Large</span><span class="hljs-string">&#x27;),
-(451, &#x27;</span>Unavailable <span class="hljs-keyword">For</span> Legal Reasons<span class="hljs-string">&#x27;),
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">400</span>, <span class="hljs-string">&#x27;Bad Request&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">401</span>, <span class="hljs-string">&#x27;Unauthorized&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">402</span>, <span class="hljs-string">&#x27;Payment Required&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">403</span>, <span class="hljs-string">&#x27;Forbidden&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">404</span>, <span class="hljs-string">&#x27;Not Found&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">405</span>, <span class="hljs-string">&#x27;Method Not Allowed&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">406</span>, <span class="hljs-string">&#x27;Not Acceptable&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">407</span>, <span class="hljs-string">&#x27;Proxy Authentication Required&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">408</span>, <span class="hljs-string">&#x27;Request Timeout&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">409</span>, <span class="hljs-string">&#x27;Conflict&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">410</span>, <span class="hljs-string">&#x27;Gone&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">411</span>, <span class="hljs-string">&#x27;Length Required&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">412</span>, <span class="hljs-string">&#x27;Precondition Failed&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">413</span>, <span class="hljs-string">&#x27;Payload Too Large&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">414</span>, <span class="hljs-string">&#x27;URI Too Long&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">415</span>, <span class="hljs-string">&#x27;Unsupported Media Type&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">416</span>, <span class="hljs-string">&#x27;Range Not Satisfiable&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">417</span>, <span class="hljs-string">&#x27;Expectation Failed&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">418</span>, <span class="hljs-string">&#x27;I&#x27;&#x27;m a teapot&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">421</span>, <span class="hljs-string">&#x27;Misdirected Request&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">422</span>, <span class="hljs-string">&#x27;Unprocessable Entity&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">423</span>, <span class="hljs-string">&#x27;Locked&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">424</span>, <span class="hljs-string">&#x27;Failed Dependency&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">425</span>, <span class="hljs-string">&#x27;Too Early&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">426</span>, <span class="hljs-string">&#x27;Upgrade Required&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">428</span>, <span class="hljs-string">&#x27;Precondition Required&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">429</span>, <span class="hljs-string">&#x27;Too Many Requests&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">431</span>, <span class="hljs-string">&#x27;Request Header Fields Too Large&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">451</span>, <span class="hljs-string">&#x27;Unavailable For Legal Reasons&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
 
--- 5xx Server Errors
-(500, &#x27;</span>Internal Server Error<span class="hljs-string">&#x27;),
-(501, &#x27;</span><span class="hljs-keyword">Not</span> Implemented<span class="hljs-string">&#x27;),
-(502, &#x27;</span>Bad Gateway<span class="hljs-string">&#x27;),
-(503, &#x27;</span>Service Unavailable<span class="hljs-string">&#x27;),
-(504, &#x27;</span>Gateway Timeout<span class="hljs-string">&#x27;),
-(505, &#x27;</span>HTTP Version <span class="hljs-keyword">Not</span> Supported<span class="hljs-string">&#x27;),
-(506, &#x27;</span>Variant Also Negotiates<span class="hljs-string">&#x27;),
-(507, &#x27;</span>Insufficient Storage<span class="hljs-string">&#x27;),
-(508, &#x27;</span>Loop Detected<span class="hljs-string">&#x27;),
-(510, &#x27;</span><span class="hljs-keyword">Not</span> Extended<span class="hljs-string">&#x27;),
-(511, &#x27;</span>Network Authentication Required<span class="hljs-string">&#x27;);
-</span></code></pre>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">500</span>, <span class="hljs-string">&#x27;Internal Server Error&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">501</span>, <span class="hljs-string">&#x27;Not Implemented&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">502</span>, <span class="hljs-string">&#x27;Bad Gateway&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">503</span>, <span class="hljs-string">&#x27;Service Unavailable&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">504</span>, <span class="hljs-string">&#x27;Gateway Timeout&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">505</span>, <span class="hljs-string">&#x27;HTTP Version Not Supported&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">506</span>, <span class="hljs-string">&#x27;Variant Also Negotiates&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">507</span>, <span class="hljs-string">&#x27;Insufficient Storage&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">508</span>, <span class="hljs-string">&#x27;Loop Detected&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">510</span>, <span class="hljs-string">&#x27;Not Extended&#x27;</span> <span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-number">511</span>, <span class="hljs-string">&#x27;Network Authentication Required&#x27;</span>
+) <span class="hljs-keyword">AS</span> seed_data
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-number">1</span> <span class="hljs-keyword">FROM</span> http_status_codes);
+</code></pre>
 <p>Now if I wanted to link all page responses by status code I can write a query like the one below.</p>
 <pre class="sql language-sql"><code class="hljs sql language-sql"><span class="hljs-keyword">SELECT</span> pr.id, pr.status_code, hsc.description
 <span class="hljs-keyword">FROM</span> page_responses pr
 <span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> http_status_codes hsc
 <span class="hljs-keyword">ON</span> pr.status_code <span class="hljs-operator">=</span> hsc.code;
-</code></pre>
-            </div>
+</code></pre></div>
 
-            <footer>
-                <p><i>Until next time,</i></p>
-                <p><i>Brian</i></p>
-            </footer>
-        </article>
-    </main>
+                    <footer>
+                        <p><i>Until next time,</i></p>
+                        <p><i>Brian</i></p>
+                    </footer>
+                </article>
+            </main>
 
-    <footer class="site-footer">
+            <footer class="site-footer">
     <p>
         <small>Since August 4th, 2023. All words by Brian
             Douglas. <a href="mailto:brianwdouglas@proton.me">Have a comment?</a></small>
     </p>
 </footer>
 
-</div>
+        </div>
 
-<script src="/scripts/chicken-and-magpie.js"></script>
-<script src="/scripts/skip-to-section.js"></script>
-</body>
+        <script src="/scripts/chicken-and-magpie.js"></script>
+        <script src="/scripts/skip-to-section.js"></script>
+    </body>
 </html>
